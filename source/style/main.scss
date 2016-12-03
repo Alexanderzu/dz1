@@ -1,0 +1,11 @@
+@import "_misc/mixins";
+@import "_misc/fonts";
+@import "_misc/fontsawesome/font-awesome";
+@import "_misc/sprite";
+
+@import "_blocks/header";
+@import "_blocks/footer";
+
+body {
+    color: #ccc;
+}

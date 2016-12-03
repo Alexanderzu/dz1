@@ -1,0 +1,22 @@
+extends _template.pug
+block title
+    title Добро пожаловать сюда!!!!
+block content
+    +link('www.google.com', 'ссылочка')(class="bt")
+    .auth
+        .auth-user
+            .auth-user__desc
+                .auth-user__social
+                    ul.social__list
+                        li.social__list-item
+                            a(class='social__list-item_link' href='https://vk.com' target=_blank)
+                                span 
+                                +icon('vk','red_mod')
+                        li.social__list-item
+                            a(class='social__list-item_link' href='https://github.com' target=_blank)
+                                span 
+                                +icon('github','red_mod')
+                        li.social__list-item
+                            a(class='social__list-item_link' href='https://linkedin.com' target=_blank)
+                                span 
+                                +icon('in','red_mod')
