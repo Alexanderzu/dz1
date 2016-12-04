@@ -1,6 +1,31 @@
-footer.footer__block
-	.container
-		.footer__copyright 2016 год
-
+footer.footer
+    .footer__block
+        ul.footer__menu
+            li.footer__menu_item 
+                a(href='') Мои работы
+            li.footer__menu_item 
+                a(href='') Обо мне
+            li.footer__menu_item 
+                a(href='') Блог
+            li.footer__menu_item
+                a(href='') Авторизация
+        ul.social__list
+            li.social__list_item
+                a(class='social__list-item_link' href='https://vk.com' target=_blank)
+                    span 
+                    +icon('vk','red_mod')
+            li.social__list_item
+                a(class='social__list-item_link' href='https://github.com' target=_blank)
+                    span 
+                    +icon('github','red_mod')
+            li.social__list_item
+                a(class='social__list-item_link' href='https://linkedin.com' target=_blank)
+                    span 
+                    +icon('in','red_mod')
+                    
+    .footer__copyright
+        p.footer__copyright_text-l Я веб-разработчик из СПб, и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. 
+        p.footer__copyright_text-r © Зуев Александр | создано с любовью в LoftSchool | 2016
+            
 script(src="assets/js/foundation.js")
 script(src="assets/js/main.js")

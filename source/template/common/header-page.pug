@@ -1,0 +1,32 @@
+header.header.header__page
+    .header__top
+        ul.social__list
+            li.social__list_item
+                a(class='social__list-item_link' href='https://vk.com' target=_blank)
+                    span 
+                    +icon('vk','red_mod')
+            li.social__list_item
+                a(class='social__list-item_link' href='https://github.com' target=_blank)
+                    span 
+                    +icon('github','red_mod')
+            li.social__list_item
+                a(class='social__list-item_link' href='https://linkedin.com' target=_blank)
+                    span 
+                    +icon('in','red_mod')
+                    
+        i.fa.fa-bars(aria-hidden='true')
+        
+    .user
+        .user__img
+            img(src='/assets/img/im.jpg',
+                alt='Я')
+        span.header__page_name Блог
+        
+        span.header__page_descr Статьи, которые я написал
+
+    
+    .box__angles
+        svg.traingle(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 1000 85', preserveaspectratio='none')
+            polygon.left(points='0,0   0,86   500.8,86   500.8,83.5')
+            polygon.right(points='1000,0   1000,86   500,86   500,83.5')
+        

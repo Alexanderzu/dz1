@@ -1,0 +1,10 @@
+doctype html
+html(lang="ru-RU")
+    include ../mixins/mixins.pug
+    include ../common/head.pug
+    body.pages
+        .wrapper
+            .maincontent
+                include ../common/header-page.pug
+                block content
+        include ../common/footer.pug

@@ -1,0 +1,21 @@
+$col-amount: 12;
+$grid-spacing: 3%;
+[class^="col-"] {
+    float: left;
+    box-sizing: border-box;
+    padding-right: $grid-spacing;
+    &:last-child {
+        padding-right: 0;
+    }
+}
+
+@for $i from 1 through $col-amount {
+    .col-#{$i} {
+        width: 100% / $col-amount * $i;
+    }
+}
+.container {
+    @extend %clearfix;
+    margin: 0 auto;
+    max-width: 1200px
+}

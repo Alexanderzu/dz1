@@ -1,1 +1,35 @@
-header.header Хедер
+header.header
+    .header__top
+        ul.social__list
+            li.social__list_item
+                a(class='social__list-item_link' href='https://vk.com' target=_blank)
+                    span 
+                    +icon('vk','red_mod')
+            li.social__list_item
+                a(class='social__list-item_link' href='https://github.com' target=_blank)
+                    span 
+                    +icon('github','red_mod')
+            li.social__list_item
+                a(class='social__list-item_link' href='https://linkedin.com' target=_blank)
+                    span 
+                    +icon('in','red_mod')
+                    
+        i.fa.fa-bars(aria-hidden='true')
+        
+    .user
+        .user__img
+            img(src='/assets/img/im.jpg',
+                alt='Я')
+        span.user__name.user__text Александр Зуев
+        
+        span.user__descr.user__text Личный сайт веб-разработчика
+        
+    a.chevron-down(href='')
+        i.fa.fa-chevron-down(aria-hidden='true')
+    
+    
+    .box__angles
+        svg.traingle(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 1000 85', preserveaspectratio='none')
+            polygon.left(points='0,0   0,86   500.8,86   500.8,83.5')
+            polygon.right(points='1000,0   1000,86   500,86   500,83.5')
+        

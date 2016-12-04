@@ -1,0 +1,157 @@
+.header {
+    background: url("/assets/img/mountains_for_parallax.png") no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+    &__top {
+        padding: 30px 30px 0px 30px;
+    }
+    .user {
+        margin-top: 150px;
+    }
+}
+
+.social {
+    &__list {
+        &_item {
+            float: left;
+            .icon {
+                font-size: 1.3rem;
+                fill: rgba(255, 255, 255, 0.81);
+                padding-right: 10px;
+                &:hover {
+                    fill: rgb(255, 255, 255);
+                }
+            }
+        }
+    }
+}
+
+.fa-bars {
+    float: right;
+    font-size: 30px;
+    color: #fff;
+}
+
+
+
+.user {
+    display: block;
+    margin: 0 auto;
+    max-width: 400px;
+    text-align: center;
+    &__img {
+        img {
+            height: 150px;
+            width: 150px;
+            border-radius: 100%;
+            margin-bottom: 10px;
+        }
+    }
+    &__name {
+        font-family: 'robotomedium';
+        font-size: 35pt;
+    }
+    &__descr {
+        color: rgba(255, 255, 255, 0.8) !important;
+    }
+    &__text {
+        display: block;
+        color: #fff;
+        margin-bottom: 10px;
+    }
+}
+
+.traingle {
+    fill: #efeee9;
+}
+
+.box__angles {
+    position: relative;
+    top: -125px;
+    left: 50%;
+    width: 2500px;
+    margin-left: -1250px;
+    svg {
+        max-width: 100%;
+        vertical-align: top;
+    }
+}
+
+.header__page {
+    height: 400px;
+    
+    span {
+        display: block;
+    }
+    .user {
+        margin-top: 40px;
+    }
+    &_name {
+        @extend h5;
+        color: #fff !important;
+        font-size: 63px !important;
+        margin-bottom: 5px !important;
+    }
+    &_descr {
+        color: #fff;
+        
+    }
+    .traingle {
+        fill: #fff;
+    }
+}
+.container__page {
+    margin-top: 70px;
+}
+
+.navigate__list {
+    margin-right: 65px;
+    &_item {
+        text-align: right;
+        a {
+            display: block;
+            color: #455a64;
+            text-decoration: none;
+            padding: 15px 15px 15px 0px;
+            line-height: 30px;
+            
+            &.active {
+                font-weight: bold;
+                color: #00bfa5;
+                border-right: 4px solid #00bfa5;
+            }
+        }
+    }
+}
+
+.blog {
+    &__container {
+        h5 {
+            text-align: left !important;
+            margin-bottom: 30px !important;
+            &:before,&:after {
+                content: " "
+            }
+                
+        }
+        p {
+            line-height: 25px;
+        }
+        &_content {
+            margin-bottom: 60px;
+            padding-bottom: 40px;
+            border-bottom: 5px solid #f1f1f2;
+            
+            
+        }
+    }
+}
+
+
+.data {
+    color: #00bfa5;
+    margin-bottom: 30px;
+}
