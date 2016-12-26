@@ -149,24 +149,64 @@ table {
 body {
     background: #efeee9;
     font-family: 'robotoregular';
+    height: 100%;
+}
+
+.wrapper {
+    position: relative;
+    min-height: 100%;
+}
+
+.maincontent {
+    padding-bottom: 160px;
 }
 
 p {
     color: #455a64;
     margin-bottom: 25px;
+    line-height: 24px;
 }
 
 .h_block {}
+
+.h_bg {}
 
 h3 {
     font-family: 'bernier_regularregular';
     font-size: 63px;
     text-align: center;
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto;
     &:before,
     &:after {
         content: " - ";
         color: #cacbc8;
+        position: absolute;
+        top: 2px;
     }
+    &:before {
+        margin-left: -40px;
+    }
+    &:after {
+        right: 23px;
+    }
+}
+
+.bg-work {
+    background-image: url("../../assets/img/bg-work.png");
+    background-position: center, center;
+    background-repeat: no-repeat;
+    padding-top: 65px;
+    padding-bottom: 30px;
+}
+
+.bg-speak {
+    background-image: url("../../assets/img/bg-about.png");
+    background-position: center, center;
+    background-repeat: no-repeat;
+    padding-top: 65px;
+    padding-bottom: 30px;
 }
 
 h4 {
@@ -175,6 +215,7 @@ h4 {
 }
 
 h5 {
+    position: relative;
     font-family: 'bernier_regularregular';
     font-size: 35px;
     text-align: center;
@@ -190,10 +231,21 @@ h6 {
 
 h4,
 h5 {
+    margin: 0px auto 40px;
+//    width: 300px;
     &:before,
     &:after {
         content: " - ";
         color: #cacbc8;
+        position: absolute;
+        top: 0px;
+    }
+    &:before {
+      margin-left: -40px;
+        
+    }
+    &:after {
+        margin-left: 20px;
     }
 }
 
@@ -203,7 +255,9 @@ h5 {
     position: relative;
     left: -200px;
 }
-
+.btn-home {
+    cursor: pointer;
+}
 .about__im {
     max-width: 438px;
     float: right;
@@ -217,9 +271,18 @@ h5 {
 .skill {
     &__block {
         margin-bottom: 20px;
+        position: relative;
         &_item {
             display: inline-block;
             margin: 20px 20px 20px 0px;
+        }
+        &_name {
+            position: absolute;
+            top: 98px;
+            left: 30px;
+            text-align: center;
+            color: #10c1a8;
+            font-size: 14px;
         }
     }
 }
@@ -234,15 +297,25 @@ h5 {
     transition: all 1s;
 }
 
-.g-circles:hover .sector {
+.g-circles .sector {
     stroke-dasharray: 200 400;
 }
 
+.contacts {
+    position: relative;
+    margin-top: 40px;
+    margin-bottom: -160px;
+}
+
 .contact-block {
+    position: absolute;
+    top: 30%;
+    left: 0;
+    right: 0;
     max-width: 380px;
     margin: 0 auto;
     padding: 40px 40px 20px 40px;
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.95);
     border-radius: 5px;
     .social__list {
         &_item {
@@ -266,9 +339,11 @@ h5 {
 }
 
 .about-say {
-    background: url("/assets/img/about-say.jpg") no-repeat;
+    background: url("../../assets/img/about-say.jpg") no-repeat;
     background-size: cover;
-    height: 800px;
+    min-height: 1280px;
+    position: relative;
+    margin-bottom: -160px;
     &__block {
         max-width: 780px;
         margin: 0 auto;
@@ -277,6 +352,12 @@ h5 {
     }
     &__speak {
         overflow: hidden;
+        margin-top: 20px;
+        &_item:before {
+            content: url("../../assets/img/commas.png");
+            margin-bottom: 30px;
+            display: block;
+        }
     }
 }
 
@@ -303,17 +384,30 @@ h5 {
 .contact-with-me {
     max-width: 380px;
     margin: 70px auto 0px;
-    background: #fff;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
     padding-top: 40px;
-    
+    position: relative;
+    .blur-form {
+        background: url(../../assets/img/about-say.jpg) center no-repeat;
+        filter: blur(20px);
+        width: 380px;
+        height: 410px;
+        &-wrapper {
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        &-info {
+            position: absolute;
+            top: 82px;
+        }
+    }
     h5 {
-      margin-bottom: 20px !important;
+        margin-bottom: 20px !important;
     }
     .form {
         &__list {
-            padding: 20px;
+            padding: 20px 20px 0px 20px;
             &_item {
                 width: 100%;
                 border-radius: 5px;
@@ -322,9 +416,11 @@ h5 {
                 box-sizing: border-box;
                 margin-bottom: 20px;
             }
+            textarea {
+                height: 110px;
+            }
         }
         &__submit {
-            
             width: 50%;
             float: left;
             border: 0;
@@ -332,7 +428,6 @@ h5 {
             color: #fff;
             padding: 15px;
             cursor: pointer;
-            
             &_left {
                 background: #26bbaa;
                 border-bottom-left-radius: 5px;
@@ -345,15 +440,515 @@ h5 {
     }
 }
 
-.chevron-down,.chevron-up {
+.chevron-down,
+.chevron-up {
     text-align: center;
     display: block;
     margin: 70px auto 0px;
     width: 50px;
 }
 
-.fa-chevron-down,.fa-chevron-up {
+.fa-chevron-down,
+.fa-chevron-up {
     text-align: center;
     color: #fff;
     font-size: 30px;
+}
+
+#map {
+    width: 100%;
+    height: 1000px;
+}
+
+.parallax {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    &__layer {
+        position: absolute;
+        width: 110%;
+        height: 110%;
+        left: 50%;
+        margin-left: -2000px;
+        bottom: 0%;
+        img {
+            position: absolute;
+            display: block;
+
+        }
+    }
+}
+
+
+/* entire container, keeps perspective */
+
+.flip-container {
+    perspective: 1000px;
+}
+
+
+/* flip the pane when hovered 
+.flip-container:hover .flipper,
+*/
+
+.flip-container.hover .flipper {
+    transform: rotateY(180deg);
+}
+
+.flip-container,
+.front,
+.back {
+    width: 380px;
+    height: 400px;
+    margin: 0 auto;
+    margin-top: 12vh;
+}
+
+
+/* flip speed goes here */
+
+.flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+
+/* hide back of pane during swap */
+
+.front,
+.back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+
+/* front pane, placed above back */
+
+.front {
+    z-index: 2;
+    /* for firefox 31 */
+    transform: rotateY(0deg);
+}
+
+
+/* back, initially hidden pane */
+
+.back {
+    transform: rotateY(180deg);
+}
+
+.btn-authorization {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 1px solid #fff;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 24px 100px 0px 0px;
+    cursor: pointer;
+    &:hover {
+        background: #fff;
+        color: #00bea4;
+    }
+}
+
+.authorization {
+    &__container {
+        padding: 40px 0px 0px 0px;
+        box-sizing: border-box;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    .user {
+        max-width: 100%;
+    }
+    .user__name {
+        color: #455a64;
+        font-size: 28px;
+    }
+    .user__descr {
+        color: #455a64 !important;
+    }
+    .social__list {
+        display: flex;
+        justify-content: center;
+        flex: 1;
+        margin-top: 30px;
+        &_item {
+            float: none;
+            .icon {
+                fill: #70d1c6;
+                margin-left: 10px;
+                &:hover {
+                    fill: #00bfa5;
+                }
+            }
+        }
+    }
+    .buttons {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
+        .btn {
+            flex-grow: 1;
+            text-align: center;
+            text-decoration: none;
+            background: #0bad98;
+            color: #fff;
+            padding: 15px 0px;
+            border-left: 1px solid rgba(255, 255, 255, 0.70);
+            border-right: 1px solid rgba(255, 255, 255, 0.70);
+            &:hover {
+                background: rgba(11, 173, 152, 0.8);
+            }
+            &:first-child {
+                border-bottom-left-radius: 10px;
+                border-right: 1px solid rgba(255, 255, 255, 0.70);
+                border-left: 0;
+            }
+            &:last-child {
+                border-bottom-right-radius: 10px;
+                border-left: 1px solid rgba(255, 255, 255, 0.70);
+                border-right: 0;
+                border-top: 0;
+                border-bottom: 0;
+            }
+        }
+    }
+}
+
+button.btn {
+    border-top: 0px;
+    cursor: pointer;
+    font-size: 16px;
+    height: 46px;
+}
+
+.checkbox:checked + .checkbox-custom::before {
+    font-family: "FontAwesome";
+    content: "\f00c";
+    color: #fff;
+    display: block;
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    bottom: -1px;
+    left: -1px;
+    background: #26bbaa;
+    border-radius: 2px;
+    padding-left: 3px;
+    padding-top: 3px;
+}
+
+span.label {
+    margin-left: 10px;
+}
+
+.checkbox,
+.radio {
+    display: none;
+}
+
+.checkbox-custom,
+.radio-custom {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+    position: relative;
+    border-radius: 2px;
+    background: #fff;
+}
+
+.checkbox-custom,
+.radio-custom,
+.label {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.inputGroupContainer__radio.checkbox:checked + .inputGroupContainer__radio.checkbox-custom::before,
+.radio:checked + .radio-custom::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 6px;
+    right: 2px;
+    bottom: 2px;
+    left: 6px;
+    background: #26bbaa;
+    width: 8px;
+    height: 8px;
+}
+
+.radio-custom,
+.radio:checked + .radio-custom::before {
+    border-radius: 50%;
+}
+
+.inputGroupContainer {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    input {
+        height: 39px;
+        max-width: 300px;
+        padding-left: 20px;
+        border: 1px solid #fff;
+        border-bottom-right-radius: 4px;
+        border-top-right-radius: 4px;
+    }
+    .input-group {
+        margin: 0px auto 20px;
+        .fa {
+            color: #c4cbcd;
+            float: left;
+            text-align: center;
+            width: 45px;
+            background: #f0efe9;
+            padding: 13px;
+            box-sizing: border-box;
+            vertical-align: middle;
+            border-bottom-left-radius: 4px;
+            border-top-left-radius: 4px;
+        }
+    }
+    &__checkbox {}
+    &__radio {
+        margin-bottom: 15px;
+        label {
+            margin-left: 20px;
+        }
+    }
+}
+
+span.info {
+    display: block;
+    text-align: center;
+    margin: 20px 0px;
+    font-weight: bold;
+    flex-direction: column;
+}
+
+.slider {
+    width: 660px;
+    position: relative;
+}
+
+.slider__content {
+    width: 640px;
+    height: 360px;
+    overflow: hidden;
+    border: 10px solid #eee;
+    position: relative;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+}
+
+.slider-controls {
+    position: absolute;
+    right: 15px;
+    bottom: 12px;
+    text-align: center;
+}
+
+.slider-controls .control-slide {
+    margin: 2px;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    overflow: hidden;
+    text-indent: -9999px;
+    background: url(radioBg.png) center bottom no-repeat;
+}
+
+.slider-controls .control-slide:hover {
+    cursor: pointer;
+    background-position: center center;
+}
+
+.slider-controls .control-slide.active {
+    background-position: center top;
+}
+
+.prew,
+.next {
+    display: none;
+    width: 15px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    text-indent: -999px;
+    background: url(arrowBg.png) left center no-repeat;
+    opacity: 0.8;
+    z-index: 3;
+}
+
+.prew {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+    background: url(arrowBg.png) right center no-repeat;
+}
+
+.prew:hover,
+.next:hover {
+    opacity: 1;
+}
+
+.slider-content:hover .prew,
+.slider-content:hover .next {
+    display: block;
+}
+
+aside.navigate {
+    float: left;
+    width: 100%;
+    text-align: right;
+    margin-top: 22px;
+
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 33.33333%;
+}
+
+.text-bottom {
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    color: #fff;
+}
+
+
+.preloader {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    background: #00bfa5;
+    &__spinner {
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &__animation {
+        width: 150px;
+        height: 150px;
+        position: relative;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-top-color: #fff;
+        animation: spin 1s linear infinite;
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-top-color: #fff;
+        }
+        &:before {
+            top: 5px;
+            right: 5px;
+            bottom: 5px;
+            left: 5px;
+            animation: spin 2s linear infinite;
+        }
+        &:after {
+            top: 15px;
+            right: 15px;
+            bottom: 15px;
+            left: 15px;
+            animation: spin 3s linear infinite;
+        }
+    }
+    &__percents {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+    }
+}
+.preloader {
+    
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    background: rgba(0, 191, 165, 0.88);
+    &__spinner {
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &__animation {
+        width: 150px;
+        height: 150px;
+        position: relative;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-top-color: #fff;
+        animation: spin 1s linear infinite;
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-top-color: #fff;
+        }
+        &:before {
+            top: 5px;
+            right: 5px;
+            bottom: 5px;
+            left: 5px;
+            animation: spin 2s linear infinite;
+        }
+        &:after {
+            top: 15px;
+            right: 15px;
+            bottom: 15px;
+            left: 15px;
+            animation: spin 3s linear infinite;
+        }
+    }
+    &__percents {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+    }
 }

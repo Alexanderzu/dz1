@@ -7,7 +7,7 @@ block content
             .h_block.h_posrel
                 h4 Обо мне
             .about__im   
-                img.about__im_foto(src='/assets/img/im.jpg',
+                img.about__im_foto(src='assets/img/im.jpg',
                     alt='Я')
                 .h_block
                     h5 Кто я
@@ -26,6 +26,7 @@ block content
                     .skill__block
                         h6 Frontend
                         .skill__block_item
+                            span.skill__block_name HTML5 & <br> CSS3
                             svg.g-circles(width='120', height='120', viewbox='30 10 140 140')
                                 circle(r='50', cx='100', cy='80', stroke='#dfdcd5', fill='none')
                                 circle.sector(r='50', cx='100', cy='80', stroke='#10c1a8', transform='rotate(-90 100 80)')
@@ -80,26 +81,29 @@ block content
                                 circle(r='50', cx='100', cy='80', stroke='#dfdcd5', fill='none')
                                 circle.sector(r='50', cx='100', cy='80', stroke='#10c1a8', transform='rotate(-90 100 80)')
                                 
-    .map  карта, будет, обещаю!
+                                
+    script(type='text/javascript', src='https://maps.googleapis.com/maps/api/js')
+    .contacts   
+        #map
+                
+        .contact-block
+            h5 Контакты
+            ul.social__list
+                li.social__list_item
+                    a(class='social__list-item_link' href='https://vk.com' target=_blank)
+                        +icon('skype','red_mod')
+                        span azskype1993
+                li.social__list_item
+                    a(class='social__list-item_link' href='https://github.com' target=_blank)
+                        +icon('github','red_mod')
+                        span artminor@yandex.ru
+                li.social__list_item
+                    a(class='social__list-item_link' href='https://linkedin.com' target=_blank)
+                        +icon('phone','red_mod')
+                        span +7 911 254 81 83
+                li.social__list_item
+                    a(class='social__list-item_link' href='https://linkedin.com' target=_blank)
+                        +icon('map_marker','red_mod')
+                        span г.Санкт-Петербург, ул. Бадаева
     
-    .contact-block
-        h5 Контакты
-        ul.social__list
-            li.social__list_item
-                a(class='social__list-item_link' href='https://vk.com' target=_blank)
-                    +icon('skype','red_mod')
-                    span azskype1993
-            li.social__list_item
-                a(class='social__list-item_link' href='https://github.com' target=_blank)
-                    +icon('github','red_mod')
-                    span artminor@yandex.ru
-            li.social__list_item
-                a(class='social__list-item_link' href='https://linkedin.com' target=_blank)
-                    +icon('phone','red_mod')
-                    span +7 911 254 81 83
-            li.social__list_item
-                a(class='social__list-item_link' href='https://linkedin.com' target=_blank)
-                    +icon('map_marker','red_mod')
-                    span г.Санкт-Петербург, ул. Бадаева
-
-           
+               

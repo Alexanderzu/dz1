@@ -3,22 +3,34 @@ block title
     title Мои работы
 block content
     .container
-         .h_bg
-                h3 Мои работы
-    .work тут будут мои работы
+        .h_bg.bg-work
+               h3 Мои работы
+    .work
+        .slider
+            .slider__content
+                .slide
+                    p 1Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool!2 месяца только самых тяжелых спытаний и бессонных ночей!
+                .slide
+                    p 2Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool!2 месяца только самых тяжелых спытаний и бессонных ночей!
+                .slide
+                    p 3Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool!2 месяца только самых тяжелых спытаний и бессонных ночей!
+                .slide
+                    p 4Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool!2 месяца только самых тяжелых спытаний и бессонных ночей!
+                .slide
+                    p 5Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool!2 месяца только самых тяжелых спытаний и бессонных ночей!
     .about-say
+        .container
+            .h_bg.bg-speak
+                    h3  Что обо мне
+                        br
+                        | говорят
         .about-say__block
-            .h_bg
-                h3  Что обо мне
-                    br
-                    | говорят
-           
                 .about-say__speak
                     .col-6
                         .about-say__speak_item
                             p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool!2 месяца только самых тяжелых спытаний и бессонных ночей!
                             .foto-speak
-                                img(src="/assets/img/dima.jpg", alt="")
+                                img(src="assets/img/dima.jpg", alt="")
                                 .foto-speak__text
                                     .foto-speak__text_name Ковальчук Дмитрий
                                     .foto-speak__text_status основатель Loftschool
@@ -27,20 +39,24 @@ block content
                         .about-say__speak_item
                             p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых спытаний и бессонных ночей!
                             .foto-speak
-                                img(src="/assets/img/dima.jpg", alt="")
+                                img(src="assets/img/dima.jpg", alt="")
                                 .foto-speak__text
                                     .foto-speak__text_name Ковальчук Дмитрий
                                     .foto-speak__text_status основатель Loftschool
+
                 .contact-with-me
-                    h5 Связаться со мной
-                    form.form
-                        .form__list
-                            input.form__list_item(type='name', name='name', value='Имя')
-                            input.form__list_item(type='email', name='email', value='E-mail')
-                            textarea.form__list_item( cols="40", rows="4", wrap='virtual')
-                        
-                        input.form__submit.form__submit_left(type='submit', name='submit', value='Отправить')
-                        input.form__submit.form__submit_right(type='submit', name='clear', value='Отчистить')
+                    .blur-form-wrapper
+                        .blur-form
+                        .blur-form-info
+                            h5 Связаться со мной
+                            form.form
+                                .form__list
+                                    input.form__list_item(type='name', name='name', value='Имя')
+                                    input.form__list_item(type='email', name='email', value='E-mail')
+                                    textarea.form__list_item( cols="40", rows="4", wrap='virtual')
+    
+                                input.form__submit.form__submit_left(type='submit', name='submit', value='Отправить')
+                                input.form__submit.form__submit_right(type='submit', name='clear', value='Отчистить')
                         
                 a.chevron-up(href='')
                     i.fa.fa-chevron-up(aria-hidden='true')

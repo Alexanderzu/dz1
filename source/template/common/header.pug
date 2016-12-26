@@ -2,11 +2,11 @@ header.header
     .header__top
         ul.social__list
             li.social__list_item
-                a(class='social__list-item_link' href='https://vk.com' target=_blank)
+                a(class='social__list-item_link' href='https://vk.com/zuevaz' target=_blank)
                     span 
                     +icon('vk','red_mod')
             li.social__list_item
-                a(class='social__list-item_link' href='https://github.com' target=_blank)
+                a(class='social__list-item_link' href='https://github.com/Alexanderzu' target=_blank)
                     span 
                     +icon('github','red_mod')
             li.social__list_item
@@ -14,11 +14,24 @@ header.header
                     span 
                     +icon('in','red_mod')
                     
-        i.fa.fa-bars(aria-hidden='true')
-        
+        nav.fullscreen-nav
+            ul.main-menu
+                li
+                    a(href="work.html") Мои работы
+                li
+                    a(href="blog.html") Блог
+                li
+                    a(href="about.html") Обо мне
+                li
+                    a(href="index.html") Авторизация
+        #nav-icon
+            span
+            span
+            span
+    
     .user
         .user__img
-            img(src='/assets/img/im.jpg',
+            img(src='assets/img/im.jpg',
                 alt='Я')
         span.user__name.user__text Александр Зуев
         

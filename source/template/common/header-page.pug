@@ -14,11 +14,24 @@ header.header.header__page
                     span 
                     +icon('in','red_mod')
                     
-        i.fa.fa-bars(aria-hidden='true')
+        nav.fullscreen-nav
+            ul.main-menu
+                li
+                    a(href="work.html") Мои работы
+                li
+                    a(href="blog.html") Блог
+                li
+                    a(href="about.html") Обо мне
+                li
+                    a(href="index.html") Авторизация
+        #nav-icon
+            span
+            span
+            span
         
     .user
         .user__img
-            img(src='/assets/img/im.jpg',
+            img(src='assets/img/im.jpg',
                 alt='Я')
         span.header__page_name Блог
         
