@@ -5,19 +5,36 @@ block content
     .container
         .h_bg.bg-work
                h3 Мои работы
-    .work
-        .slider
-            .slider__content
-                .slide
-                    p 1Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool!2 месяца только самых тяжелых спытаний и бессонных ночей!
-                .slide
-                    p 2Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool!2 месяца только самых тяжелых спытаний и бессонных ночей!
-                .slide
-                    p 3Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool!2 месяца только самых тяжелых спытаний и бессонных ночей!
-                .slide
-                    p 4Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool!2 месяца только самых тяжелых спытаний и бессонных ночей!
-                .slide
-                    p 5Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool!2 месяца только самых тяжелых спытаний и бессонных ночей!
+
+    .slider
+        ul.slider__list
+            li.slider__item
+                .project-image
+                    img(src='assets/img/pr1.png', alt='Сайт-портфолио')
+                .project-info
+                    .project-info__name Сайт-портфолио
+                    .project-info__tools Pug, Sass, JS, Jquery, Gulp 4
+                    a.project-info__link(href='', target='_blank')
+          
+                    a.project-info__btn(href='', target='_blank') Посмотреть сайт
+                    
+            li.slider__item
+                .project-image
+                    img(src='assets/img/pr1.png', alt='Сайт-портфолио')
+                .project-info
+                    .project-info__name Сайт-портфолио
+                    .project-info__tools Pug, Sass, JS, Jquery, Gulp 4
+                    a.project-info__link(href='', target='_blank')
+          
+                    a.project-info__btn(href='', target='_blank') Посмотреть сайт
+                    
+                
+        ul.slider__dots
+        .slider__controls
+            a.slider__controls-btn.slider__controls-btn_next
+         
+            a.slider__controls-btn.slider__controls-btn_prev
+           
     .about-say
         .container
             .h_bg.bg-speak
@@ -51,12 +68,12 @@ block content
                             h5 Связаться со мной
                             form.form
                                 .form__list
-                                    input.form__list_item(type='name', name='name', value='Имя')
-                                    input.form__list_item(type='email', name='email', value='E-mail')
-                                    textarea.form__list_item( cols="40", rows="4", wrap='virtual')
+                                    input.form__list_item#name(type='name', name='name', value='', placeholder='Ваше Имя')
+                                    input.form__list_item#email(type='email', name='email', value='', placeholder='Ваше e-mail')
+                                    textarea.form__list_item( cols="40", rows="4", wrap='virtual', placeholder='Ваше сообщение')
     
                                 input.form__submit.form__submit_left(type='submit', name='submit', value='Отправить')
-                                input.form__submit.form__submit_right(type='submit', name='clear', value='Отчистить')
+                                input.form__submit.form__submit_right#reset(type='reset', name='clear', value='Отчистить')
                         
                 a.chevron-up(href='')
                     i.fa.fa-chevron-up(aria-hidden='true')

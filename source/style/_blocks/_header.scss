@@ -69,7 +69,7 @@
 
 .box__angles {
     position: relative;
-    top: -125px;
+    top: -120px;
     left: 50%;
     width: 2500px;
     margin-left: -1250px;
@@ -105,45 +105,25 @@
     margin-top: 70px;
 }
 
-.navigate__list {
-    margin-right: 45px;
-    &_item {
-        text-align: right;
-        a {
+.navigate {
+    &__item {
+        &_link {
             display: block;
             color: #455a64;
             text-decoration: none;
             padding: 15px 15px 15px 0px;
             line-height: 30px;
-            &.active {
+          
+        }
+          &.active {
                 font-weight: bold;
                 color: #00bfa5;
                 border-right: 4px solid #00bfa5;
             }
-        }
     }
 }
 
-.blog {
-    &__container {
-        h5 {
-            text-align: left !important;
-            margin-bottom: 30px !important;
-            &:before,
-            &:after {
-                content: " "
-            }
-        }
-        p {
-            line-height: 25px;
-        }
-        &_content {
-            margin-bottom: 60px;
-            padding-bottom: 40px;
-            border-bottom: 5px solid #f1f1f2;
-        }
-    }
-}
+
 
 .data {
     color: #00bfa5;
