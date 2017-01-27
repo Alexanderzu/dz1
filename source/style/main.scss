@@ -133,6 +133,11 @@ blockquote {
     }
 }
 
+.btn,
+.btn-authorization {
+    transition: all 0.1s linear;
+}
+
 q {
     &:before,
     &:after {
@@ -345,6 +350,8 @@ h5 {
     min-height: 1280px;
     position: relative;
     margin-bottom: -160px;
+    
+    
     &__block {
         max-width: 780px;
         margin: 0 auto;
@@ -354,6 +361,11 @@ h5 {
     &__speak {
         overflow: hidden;
         margin-top: 20px;
+        
+        &_item {
+            margin-bottom: 40px;
+            overflow: hidden;
+        }
         &_item:before {
             content: url("../../assets/img/commas.png");
             margin-bottom: 30px;
@@ -365,6 +377,7 @@ h5 {
 .blog {
     float: right;
     &__container {
+        padding: 0 10px;
         h5 {
             text-align: left !important;
             margin-bottom: 30px !important;
@@ -449,16 +462,20 @@ h5 {
             }
             textarea {
                 height: 110px;
+                resize: none;
+                font-size: 16px;
             }
         }
         &__submit {
             width: 50%;
             float: left;
             border: 0;
-            font-weight: bold;
+            font-weight: 700;
+            font-size: 14px;
             color: #fff;
-            padding: 15px;
+            padding: 16px;
             cursor: pointer;
+            transition: all 0.1s linear;
             &_left {
                 background: #26bbaa;
                 border-bottom-left-radius: 5px;
@@ -543,6 +560,9 @@ h5 {
     height: 400px;
     margin: 0 auto;
     margin-top: 12vh;
+    @media screen and (max-width: 1200px) {
+        width: 100%;
+    }
 }
 
 
@@ -789,6 +809,9 @@ aside.navigate {
     position: fixed;
     top: 0;
     width: 350px;
+    @media screen and (max-width: 768px) {
+        position: static;
+    }
 }
 
 .text-bottom {
@@ -914,37 +937,6 @@ aside.navigate {
     }
 }
 
-//.slider {
-//    position: relative;
-//    display: inline-block;
-//    margin-left: 200px;
-//    &__list {
-//        width: 2000px;
-//        position: relative;
-//        left: 0px;
-//        @extend %clearfix;
-//        &--wrap {
-//            width: 250px;
-//            height: 150px;
-//            overflow: hidden;
-//        }
-//    }
-//    &__item {
-//        float: left;
-//        width: 250px;
-//        height: 150px;
-//    }
-//    &__controls-button {
-//        position: absolute;
-//        top: 50px;
-//        &_next {
-//            right: -100px;
-//        }
-//        &_prev {
-//            left: -100px;
-//        }
-//    }
-//}
 .slider {
     position: relative;
     background-color: #e6e6e1;
@@ -956,6 +948,9 @@ aside.navigate {
         margin: 0 auto;
         position: relative;
         overflow: hidden;
+        @media screen and (max-width: 768px) {
+            height: auto;
+        }
     }
     &__item {
         position: absolute;
@@ -977,6 +972,10 @@ aside.navigate {
         right: 0;
         text-align: center;
         z-index: 10;
+        @media screen and (max-width: 768px) {
+            position: static;
+            padding-bottom: 40px;
+        }
         &_item {
             display: inline-block;
             margin: 0 9px;
@@ -1018,7 +1017,7 @@ aside.navigate {
         }
         &_prev {
             left: 20px;
-             &:before {
+            &:before {
                 font-family: FontAwesome;
                 content: "\f053";
             }
@@ -1028,17 +1027,27 @@ aside.navigate {
         &-image {
             float: left;
             width: 50%;
+            @media screen and (max-width: 768px) {
+                width: 100%;
+                margin-bottom: 20px;
+                float: none;
+            }
         }
         &-info {
             float: right;
             margin-top: 150px;
-            
+            @media screen and (max-width: 768px) {
+                width: 100%;
+                margin-top: 20px;
+                margin-bottom: 40px;
+                padding: 10px;
+                float: none;
+            }
             &__name {
                 font-family: 'bernier_regularregular';
                 font-size: 36px;
                 margin-bottom: 20px;
             }
-            
             &__tools {
                 font-size: 16px;
                 color: #20b5a1;
@@ -1047,7 +1056,6 @@ aside.navigate {
                 padding: 10px 0px;
                 margin-bottom: 40px;
             }
-            
             &__btn {
                 background: #20b5a1;
                 color: #fff;
@@ -1062,7 +1070,6 @@ aside.navigate {
                     content: "\f0c1";
                     margin-right: 10px;
                 }
-                
             }
         }
     }

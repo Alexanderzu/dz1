@@ -22,75 +22,75 @@ block content
             img(src="assets/img/parallax/parallax__layer_8-min.png")
         
     .btn-authorization Авторизоваться 
- 
-    .flip-container.authorization#flip-toggle
-        .flipper
-            .front.authorization__container
-                .user
-                    .user__img
-                        img(src='assets/img/im.jpg',
-                            alt='Я')
-                    span.user__name.user__text Александр Зуев
+    .container-index
+        .flip-container.authorization#flip-toggle
+            .flipper
+                .front.authorization__container
+                    .user
+                        .user__img
+                            img(src='assets/img/im.jpg',
+                                alt='Я')
+                        span.user__name.user__text Александр Зуев
 
-                    span.user__descr.user__text Личный сайт веб-разработчика
-                    
-                ul.social__list
-                    li.social__list_item
-                        a(class='social__list-item_link' href='https://vk.com' target=_blank)
-                            span 
-                            +icon('vk','red_mod')
-                    li.social__list_item
-                        a(class='social__list-item_link' href='https://github.com' target=_blank)
-                            span 
-                            +icon('github','red_mod')
-                    li.social__list_item
-                        a(class='social__list-item_link' href='https://linkedin.com' target=_blank)
-                            span 
-                            +icon('in','red_mod')
-                            
-                .buttons
-                    a.btn(href="work.html") Мои работы 
-                    a.btn(href="about.html") Обо мне
-                    a.btn(href="blog.html") Блог
-            .back.authorization__container
-                h5 Авторизация
-                form#contact_form(action=' ', method='post')
-                    .form-group
-                        .inputGroupContainer
-                            .input-group
-                                i.fa.fa-user(aria-hidden='true')
-                                input.form-control(name='l', placeholder='Логин', type='text')
-                                
-                        .inputGroupContainer
-                            .input-group
-                                i.fa.fa-key(aria-hidden='true')
-                                input.form-control(type="password", name="p", placeholder='Пароль')
-                                
-                        .inputGroupContainer.inputGroupContainer__checkbox
-                            label
-                                input.checkbox(type='checkbox', name='checkbox')
-                                span.checkbox-custom
-                                span.label Я человек
-                                
-                        .inputGroupContainer
-                            span.info Вы точно не робот?
-                            .inputGroupContainer__radio
-                                label
-                                    input.radio(type='radio', name='radio')
-                                    span.radio-custom
-                                    span.label Да
-                                    
-                                label
-                                    input.radio(type='radio', name='radio')
-                                    span.radio-custom
-                                    span.label Не уверен
-                                
-                                
+                        span.user__descr.user__text Личный сайт веб-разработчика
+
+                    ul.social__list
+                        li.social__list_item
+                            a(class='social__list-item_link' href='https://vk.com' target=_blank)
+                                span 
+                                +icon('vk','red_mod')
+                        li.social__list_item
+                            a(class='social__list-item_link' href='https://github.com' target=_blank)
+                                span 
+                                +icon('github','red_mod')
+                        li.social__list_item
+                            a(class='social__list-item_link' href='https://linkedin.com' target=_blank)
+                                span 
+                                +icon('in','red_mod')
+
                     .buttons
-                        .btn.btn-home На главную
-                        button.btn(type='submit') Войти
-                        
-    .text-bottom © Зуев Александр | создано с любовью в LoftSchool | 2016
+                        a.btn(href="work.html") Мои работы 
+                        a.btn(href="about.html") Обо мне
+                        a.btn(href="blog.html") Блог
+                .back.authorization__container
+                    h5 Авторизация
+                    form#contact_form(action=' ', method='post')
+                        .form-group
+                            .inputGroupContainer
+                                .input-group
+                                    i.fa.fa-user(aria-hidden='true')
+                                    input.form-control(name='l', placeholder='Логин', type='text')
+
+                            .inputGroupContainer
+                                .input-group
+                                    i.fa.fa-key(aria-hidden='true')
+                                    input.form-control(type="password", name="p", placeholder='Пароль')
+
+                            .inputGroupContainer.inputGroupContainer__checkbox
+                                label
+                                    input.checkbox(type='checkbox', name='checkbox')
+                                    span.checkbox-custom
+                                    span.label Я человек
+
+                            .inputGroupContainer
+                                span.info Вы точно не робот?
+                                .inputGroupContainer__radio
+                                    label
+                                        input.radio(type='radio', name='radio')
+                                        span.radio-custom
+                                        span.label Да
+
+                                    label
+                                        input.radio(type='radio', name='radio')
+                                        span.radio-custom
+                                        span.label Не уверен
+
+
+                        .buttons
+                            .btn.btn-home На главную
+                            button.btn(type='submit') Войти
+
+        .text-bottom © Зуев Александр | создано с любовью в LoftSchool | 2016
     
 
         

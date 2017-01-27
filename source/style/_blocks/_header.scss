@@ -247,6 +247,10 @@
             color: #fff;
             font-size: 63px;
             text-decoration: none;
+            
+            @media screen and (max-width: 768px) {
+                font-size: 40px;
+            }
             &:before,
             &:after {
                 content: " - ";
